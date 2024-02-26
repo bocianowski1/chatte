@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./public/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 600px;
+  max-height: 80vh;
+  margin: 0 auto;
+}
+
+div[id="messages"] {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #444444;
+  overflow-y: scroll;
+  height: 300px;
+  margin-bottom: auto;
+}
+
+input {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #444444;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f1356d;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #f1356d;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
