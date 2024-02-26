@@ -1,4 +1,9 @@
-var socket = new WebSocket("wss://" + location.host + "/ws");
+if (window.location.protocol === "https:") {
+  var ws_scheme = "wss://";
+} else {
+  var ws_scheme = "ws://";
+}
+var socket = new WebSocket(ws_scheme + location.host + "/ws");
 
 socket.onopen = function (e) {
   console.log("Connection established!");
