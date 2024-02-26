@@ -1,4 +1,4 @@
-var socket = new WebSocket("ws://localhost:8080/ws");
+var socket = new WebSocket("wss://" + location.host + "/ws");
 
 socket.onopen = function (e) {
   console.log("Connection established!");
@@ -20,7 +20,7 @@ function sendMessage() {
   if (message === "") {
     return;
   }
-
   socket.send(message);
+
   document.getElementById("message").value = "";
 }

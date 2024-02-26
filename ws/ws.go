@@ -17,13 +17,7 @@ var unregister = make(chan *websocket.Conn)
 
 var upgrader = websocket.Upgrader{
 	CheckOrigin: func(r *http.Request) bool {
-		allowedPorts := []string{"5500", "8080", "3000", "5173"}
-		for _, port := range allowedPorts {
-			if r.Host == "localhost:"+port {
-				return true
-			}
-		}
-		return false
+		return true
 	},
 	ReadBufferSize:  1024,
 	WriteBufferSize: 1024,
